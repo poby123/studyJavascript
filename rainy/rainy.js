@@ -1,6 +1,7 @@
 $(document).ready(function(){ //when document is ready
 
 var canvas = $('#canvas')[0];
+console.log(canvas);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -50,14 +51,14 @@ if (canvas.getContext) {
       var p = particles[b];
       p.x += p.xs;
       p.y += p.ys;
-      if (p.x > w || p.y > h) {
-        p.x = Math.random() * w;
+      if (p.x > w || p.y > h) { //if x is bigger than width or y is bigger than h
+        p.x = Math.random() * w; //refactoring
         p.y = -20;
       }
     }
   }
 
-  setInterval(draw, 30);
+  setInterval(draw,33); //setInterval(function, time)
 
 }
 });
