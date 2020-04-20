@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){
+	 $('.submitBtn').click(function(){
+	 	//alert('clicked');
+	 	var x = $('.editorDIV').html();
+	 	alert(x);
+	 	document.getElementById("hiddenText").value = x;
+	 })
+	});
+	function test(x){
+		
+	}
+</script>
+</head>
+<body>
+	<div class="buttons">
+ 	  <input type="button" class="BOLD" value="B" onclick="document.execCommand('bold')" />
+  	  <input type="button" class="ITALIC" value="Italic" onclick="document.execCommand('Italic')" />
+  	  <input type="button" class="UNDERBAR" value="abc" onclick="document.execCommand('Underline')" />
+  	  <input type="button" class="BAR" value="abc" onclick="document.execCommand('StrikeThrough')" />
+  	  <input type="button" class="aignLeft" value="왼쪽 정렬" onclick="document.execCommand('justifyleft')" />
+  	  <input type="button" class="aignCenter" value="가운데 정렬" onclick="document.execCommand('justifycenter')" />
+  	  <input type="button" class="aignRight" value="오른쪽 정렬" onclick="document.execCommand('justifyright')" />
+	  <input type="button" class="blue" value="파란색 글자" onclick="document.execCommand('foreColor', false, 'blue');"/>
+	</div>
+	<div class="editorDIV" contenteditable="true" id="writtenText"></div>
+		<input type="text" id="hiddenText" name="text"/>
+     	<button class="submitBtn">저장</button>
+
+</body>
+</html>

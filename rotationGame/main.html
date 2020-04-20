@@ -1,0 +1,73 @@
+<!--*******************************************
+Created by Najeeb Farhan Mazumdar
+
+Inspiration:
+https://pin.it/4NWek0M
+
+Date of creation: 13/4/2020
+
+If you like the game, upvote it for sure and also share it please❗
+********************************************-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Whirly Whoosh</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap">
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="start">
+            <div id="lobby">
+               <h1>Whirly Whoosh</h1>
+               <p id="play">Start</p>
+               <p id="help">Help</p>
+            </div>
+        </div>
+
+        <div id="dashBoard">
+            <span id="Score"></span>
+            <span id="Life"></span>
+        </div>
+        <div id="gameField">
+
+                <span id="ball1"></span>
+                <span id="ball2"></span>
+
+        </div>
+
+        <div id="gameOver">
+            <h1>Game Over</h1>
+            <p id="result"></p>
+            <p id="replay">Play again</p>
+            <p id="help2">Help</p>
+        </div>
+
+        <div id="instruction">
+            <p align="right">
+                <i id="Close" class="fa fa-times" aria-hidden="true"></i>
+            </p>
+                <ol>
+                    <li>Tap on the screen to change the direction of the rotation</li>
+                    <li>On the upper-right corner, you can see 5 hearts which is your health</li>
+                    <li>Avoid black blocks or one health will be decrease, when health reaches to zero, the game overs</li>
+                    <li>Collect white block to increase score</li>
+                </ol>
+         </div>
+        <script>
+            help.addEventListener("click", ()=>{
+                instruction.style.transform="translate(-50%, -50%)";
+                });
+                help2.addEventListener("click", ()=>{
+                instruction.style.transform="translate(-50%, -50%)";
+            });
+            Close.addEventListener("click", ()=>{
+                instruction.style.transform="translate(-50%, 100%)";
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		function eventfunction(x){
+			alert(x);
+			document.getElementById('indexText').value = x;
+		}
+	</script>
+	<title>TEST JS</title>
+</head>
+<body>
+	<button class="content" id="1" onclick="eventfunction(1)">1번 인덱스</button>
+	<button class="content" id="2" onclick="eventfunction(2)">2번 인덱스</button>
+	<button class="content" id="3" onclick="eventfunction(3)">3번 인덱스</button>
+	<button class="content" id="4" onclick="eventfunction(4)">4번 인덱스</button>
+	<input type="text" id="indexText" name="index"/>
+</body>
+</html>
