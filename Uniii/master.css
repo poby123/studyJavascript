@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+:root{
+  --title-color : #c6e2ff;
+  --accent-color : white;
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+h1,h2,h3,h4,h5{
+  margin : 0;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+/*sectionA : main title, and main Image*/
+.sectionA{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 450px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('space.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.sectionA container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.sectionA h1{
+  display: inline-block;
+  color: var(--title-color);
+  font-family: 'Poiret One', cursive;
+  font-size: 70px;
+  letter-spacing: 0.2em;
+  margin-left: 0.2em;
+}
+.sectionA img{
+  width: 80px;
+  height: 80px;
+}
+
+/*sectionB : navigation bar*/
+.sectionB{
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.sectionB .container{
+  /* border : 1px solid red; */
+}
+.sectionB ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Sunflower', sans-serif;
+  padding-left: 0;
+}
+.sectionB a{
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color : blue;
+}
+
+/*sectionC : footer content*/
+.sectionC{
+  position:relative;
+  height: 5vh;
+  width: 100%;
+}
+
+.sectionC .container{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Sunflower', sans-serif;
+}
