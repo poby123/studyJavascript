@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
 
 :root{
-  --title-color : #c6e2ff;
+  --title-color : white;
+  /* --title-color : #c6e2ff; */
   --accent-color : white;
 }
 
@@ -22,6 +23,7 @@ ul{
 /*sectionA : main title, and main Image*/
 .sectionA{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -30,7 +32,9 @@ ul{
   background-position: center;
   background-size: cover;
 }
-.sectionA container{
+.sectionA .container{
+  /* border : 1px solid white; */
+  position: absolute;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -48,13 +52,69 @@ ul{
   width: 80px;
   height: 80px;
 }
+.sectionA img:hover{
+  cursor: pointer;
+}
+/*sectionLoginBtn : Btn section*/
+.sectionLoginBtn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top : 80vh;
+    width: 99%;
+}
+#showLoginBtn{
+  background: none;
+  text-align: center;
+  width : 100px;
+  border: none;
+  color: cyan;
+  font-size: 30px;
+}
+#showLoginBtn:hover{
+  cursor: pointer;
+  color:  purple;
+}
+/*LoginSection*/
+.sectionLogin{
+  position: absolute;
+  display: none;
+  border: 1px solid cyan;
+  border-radius: 10px;
+  width: 60vw;
+  height: 30vh;
+  left: 20vw;
+  top: 35vh;
+  justify-content: center;
+  align-items: center;
 
+}
+.sectionLogin .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionLogin h3{
+  color: white;
+  margin-bottom: 20px;
+}
+.sectionLogin button{
+  background: none;
+  color : white;
+  margin-top: 15px;
+  width: 120px;
+}
+
+.sectionLogin button:hover{
+  cursor: pointer;
+}
 /*sectionB : navigation bar*/
 .sectionB{
   position: absolute;
   display: flex;
   right: 0;
-  width: 50vw;
+  width: 51vw;
   height: 100vh;
   background-color: white;
   align-items: center;
