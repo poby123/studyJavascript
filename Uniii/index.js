@@ -5,12 +5,19 @@ $(document).ready(function() {
   var flagNavShow = false; //sectionB : nav bar show flag
   var flagLoginShow = false; //sectionLogin : Login show flag
 
-  //처음에는 보여지지 않는 상태
-  $('.sectionB').animate({width: 'toggle'});
+  $('#barIcon').click(function(){
+    $('.nav').animate({height:'toggle'});
+  });
+
+  // //처음에는 보여지지 않는 상태
+  // $('.sectionB').animate({width: 'toggle'});
 
   /*title image click event*/
   $('#titleImg').click(function(){
-    if(!flagLoginShow) controlUnicornRotate();
+    if(!flagLoginShow) {
+      controlUnicornRotate();
+      $('.sectionB').css('display','flex');
+    }
   });//title image click event end
 
   /*showLoginBtn click event*/
@@ -21,7 +28,6 @@ $(document).ready(function() {
       controlUnicornRotate();
     }
     if(flagLoginShow){
-      //$('.sectionA .container').css('transform',`scale(0.5)`);
       titleMove( [{y:0}, {y:-200}] );
       $('.sectionLogin').css('display', 'flex');
     }

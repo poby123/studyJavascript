@@ -1,38 +1,43 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
-
-:root{
-  --title-color : white;
+:root {
+  --title-color: white;
   /* --title-color : #c6e2ff; */
-  --accent-color : white;
+  --accent-color: white;
 }
 
-html,body{
+/*basic setting*/
+html, body {
   margin: 0;
   padding: 0;
   position: relative;
 }
-h1,h2,h3,h4,h5{
-  margin : 0;
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
 }
-a{
+
+a {
   text-decoration: none;
 }
-ul{
+
+ul {
   list-style: none;
 }
+
+/*index.html page*/
 /*sectionA : main title, and main Image*/
-.sectionA{
+.sectionA {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   min-height: 450px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('space.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('space.jpg');
   background-position: center;
   background-size: cover;
 }
-.sectionA .container{
+
+.sectionA .container {
   /* border : 1px solid white; */
   position: absolute;
   display: flex;
@@ -40,7 +45,8 @@ ul{
   justify-content: center;
   align-items: center;
 }
-.sectionA h1{
+
+.sectionA h1 {
   display: inline-block;
   color: var(--title-color);
   font-family: 'Poiret One', cursive;
@@ -48,71 +54,96 @@ ul{
   letter-spacing: 0.2em;
   margin-left: 0.2em;
 }
-.sectionA img{
+
+.sectionA img {
   width: 80px;
   height: 80px;
 }
-.sectionA img:hover{
+
+.sectionA img:hover {
   cursor: pointer;
 }
+
 /*sectionLoginBtn : Btn section*/
-.sectionLoginBtn{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top : 80vh;
-    width: 99%;
+.sectionLoginBtn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 80vh;
+  left: 1vw;
+  width: 99%;
 }
-#showLoginBtn{
+
+#showLoginBtn {
   background: none;
   text-align: center;
-  width : 100px;
+  width: 100px;
   border: none;
-  color: cyan;
+  color: white;
   font-size: 30px;
 }
-#showLoginBtn:hover{
+
+#showLoginBtn:hover {
   cursor: pointer;
-  color:  purple;
+  color: cyan;
 }
+
 /*LoginSection*/
-.sectionLogin{
+.sectionLogin {
   position: absolute;
   display: none;
   border: 1px solid cyan;
   border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 60vw;
   height: 30vh;
   left: 20vw;
   top: 35vh;
   justify-content: center;
   align-items: center;
-
 }
-.sectionLogin .container{
+
+.sectionLogin .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
-.sectionLogin h3{
+
+.sectionLogin h3 {
   color: white;
-  margin-bottom: 20px;
-}
-.sectionLogin button{
-  background: none;
-  color : white;
-  margin-top: 15px;
-  width: 120px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
-.sectionLogin button:hover{
+.sectionLogin input {
+  font-size: 15px;
+  width: 150px;
+}
+
+.sectionLogin a {
+  font-size: 12px;
+  color: white;
+  text-decoration: underline;
+}
+
+.sectionLogin button {
+  background: none;
+  color: white;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.sectionLogin button:hover {
   cursor: pointer;
 }
+
 /*sectionB : navigation bar*/
-.sectionB{
+.sectionB {
   position: absolute;
-  display: flex;
+  display: none;
   right: 0;
   width: 51vw;
   height: 100vh;
@@ -120,25 +151,29 @@ ul{
   align-items: center;
   justify-content: center;
 }
-.sectionB .container{
-  /* border : 1px solid red; */
-}
-.sectionB ul{
+
+.sectionB .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border : 1px solid blue; */
+}
+
+.sectionB ul {
   align-items: center;
   flex-direction: column;
   font-family: 'Sunflower', sans-serif;
-  padding-left: 0;
 }
-.sectionB a{
+
+.sectionB a {
   display: inline-block;
   margin-bottom: 20px;
   font-size: 20px;
-  color : blue;
+  color: blue;
 }
 
 /*sectionC : footer content*/
-.sectionC{
+/* .sectionC{
   position:relative;
   height: 5vh;
   width: 100%;
@@ -152,4 +187,161 @@ ul{
   justify-content: flex-start;
   align-items: center;
   font-family: 'Sunflower', sans-serif;
+} */
+/*Other Page */
+/*menuBar is place at top of the page at PC*/
+.menuBar {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('space.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.menuBar .container {
+  display: flex;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-content: center;
+  /* border : 1px solid red; */
+}
+.menuBar #barIcon{
+  display: none;
+}
+.menuBar .small-container {
+  width: 20vw;
+  /* border : 1px solid cyan; */
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menuBar h1 a {
+  color: white;
+}
+
+.menuBar img {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.3em;
+}
+
+.menuBar ul {
+  display: flex;
+  /* border: 1px solid cyan; */
+  width: 800px;
+  justify-content: space-around;
+}
+
+.menuBar .menu {
+  font-size: 15px;
+  color: white;
+}
+
+.menuBar .menu:hover {
+  color: cyan;
+}
+
+/*currentMenu*/
+.currentMenu {
+  /* border : 1px solid blue; */
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.currentMenu .container {
+  margin-top: 10vh;
+  flex: 2;
+  text-align: center;
+  border-right: 1px solid grey;
+  /* border: 1px solid red; */
+}
+
+.currentMenu h2 {
+  display: inline-block;
+  margin-top: 5vh;
+}
+
+.currentMenu .recruiting {
+  margin-top: 10vh;
+  flex: 9;
+  /* border : 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.currentMenu form{
+  font-size: 15px;
+  line-height: 2em;
+}
+.currentMenu .recruiting button{
+  width: 200px;
+  font-size: 15px;
+  background: none;
+  border: none;
+  border: 1px solid purple;
+}
+button:hover{
+  cursor : pointer;
+}
+/**/
+@media (max-width : 768px) {
+
+  .menuBar .small-container {
+    /* border : 1px solid cyan; */
+    font-size: 15px;
+    margin-left: 2vw;
+  }
+  .menuBar .container{
+    justify-content: space-between;
+  }
+  .menuBar img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.3em;
+  }
+  .menuBar #barIcon{
+    display : inline-block;
+    min-width: 5vw;
+    /* border : 1px solid white; */
+    padding-top : 1vh;
+    margin-right: 3vw;
+    color : white;
+  }
+  .menuBar nav{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    border : 1px solid blue;
+    background: black;
+  }
+  .menuBar ul{
+    display: block;
+    color : white;
+    line-height: 2em;
+  }
+  .currentMenu{
+    /* display: block; */
+    font-size: 15px;
+    line-height: 2em;;
+  }
+  .currentMenu .container{
+    border-right: none;
+    display: none;
+  }
+  .currentMenu form input{
+    font-size: 15px;
+  }
+  .currentMenu form textarea{
+    font-size: 15px;
+    width: 80vw;
+  }
 }
